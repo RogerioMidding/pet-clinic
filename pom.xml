@@ -23,7 +23,8 @@
 	 <scm>
 		<connection>scm:git@github.com:RogerioMidding/pet-clinic.git</connection>
  		<developerConnection>scm:git:https://github.com/RogerioMidding/pet-clinic.git</developerConnection>
-	</scm>
+	  <tag>pet-clinic-0.0.1</tag>
+  </scm>
 	<properties>
 		<java.version>24</java.version>
 	</properties>
