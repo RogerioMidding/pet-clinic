@@ -22,7 +22,7 @@
 	</developers>
 	 <scm>
 		<!-- <connection>scm:git:https://github.com/RogerioMidding/pet-clinic</connection>-->
- 		<developerConnection>scm:git@github.com:RogerioMidding/pet-clinic.git</developerConnection>
+ 		<developerConnection>scm:git:git@github.com:RogerioMidding/pet-clinic.git</developerConnection>
 	   <tag>pet-clinic-0.0.1</tag>
   </scm>
 	<properties>
