@@ -1,5 +1,6 @@
 package guru.springframework.pet_clinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -7,8 +8,6 @@ import guru.springframework.pet_clinic.model.Owner;
 import guru.springframework.pet_clinic.model.Vet;
 import guru.springframework.pet_clinic.services.OwnerService;
 import guru.springframework.pet_clinic.services.VetService;
-import guru.springframework.pet_clinic.services.map.OwnerServiceMap;
-import guru.springframework.pet_clinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -16,10 +15,10 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 	
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
-		
+	@Autowired
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override
