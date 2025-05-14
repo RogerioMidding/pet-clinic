@@ -27,7 +27,4 @@ public class Pet extends BaseEntity {
 		this.birthDate = birthDate;
 	}
 	
-	
-	
-
 }
