@@ -3,9 +3,9 @@ package guru.springframework.pet_clinic.services.map;
 import java.util.Set;
 
 import guru.springframework.pet_clinic.model.Pet;
-import guru.springframework.pet_clinic.services.CrudService;
+import guru.springframework.pet_clinic.services.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long>{
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
