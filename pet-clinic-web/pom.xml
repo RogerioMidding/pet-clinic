@@ -8,13 +8,13 @@
   <artifactId>pet-clinic-web</artifactId>
   
   <properties>
-  		<!-- Web dependencies -->
+  		<!-- Web dependencies 
 	    <webjars-locator.version>1.0.1</webjars-locator.version>
 	    <webjars-bootstrap.version>5.3.3</webjars-bootstrap.version>
-	    <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
+	    <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>-->
 	    <!-- <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
 	    <webjars-jquery.version>2.2.4</webjars-jquery.version>
-	    <wro4j.version>1.8.0</wro4j.version>-->
+	    <wro4j.version>>1.8.0</wro4j.version>-->
   </properties>
   
   <dependencies>
@@ -42,7 +42,7 @@
 			<optional>true</optional>
 		</dependency>
 		
-		<!-- Webjars -->
+		<!-- Webjars 
 	    <dependency>
 	      <groupId>org.webjars</groupId>
 	      <artifactId>webjars-locator-lite</artifactId>
@@ -57,8 +57,8 @@
 	      <groupId>org.webjars.npm</groupId>
 	      <artifactId>font-awesome</artifactId>
 	      <version>${webjars-font-awesome.version}</version>
-	    </dependency>
-	    <!--  <dependency>
+	    </dependency>-->
+	<!--      <dependency>
 	      <groupId>org.webjars</groupId>
 	      <artifactId>jquery</artifactId>
 	      <version>${webjars-jquery.version}</version>
@@ -67,7 +67,7 @@
 	      <groupId>org.webjars</groupId>
 	      <artifactId>jquery-ui</artifactId>
 	      <version>${webjars-jquery-ui.version}</version>
-	    </dependency> -->
+	    </dependency>-->
 	    <!--end of Webjars -->
 		
 		<dependency>
