@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html xmnlns:th="http://www.thymeleaf.org">
+<html xmnlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
 <head>
 <meta charset="UTF-8">
 <title>List of Pet Owners</title>
 </head>
 <body>
 <!-- /*@thymesVar id="owner" type="guru.springframework.pet_clinic.model.Owner"*/ -->
-	<h1 th:text="'List Owners'">Owners List...</h1>
-	<table>
+	<h2 th:text="'List Owners'">Owners List...</h2>
+	<table id="owners" class="table table-striped">
 		<thead>
 		<tr>
-			<th>Id</th>
-			<th>First Name</th>
-			<th>Last Name</th>
+			<th style="width: 150px;">Id</th>
+			<th style="width: 150px;">Name</th>
+			<th style="width: 150px;">Lastname</th>
+			<!-- <th style="width: 200px;">Address</th>
+			<th>City</th>
+			<th style="width: 200px;">Telephone</th>
+			<th>Pets</th> -->
 		</tr>
 		</thead>
 		<tbody>
