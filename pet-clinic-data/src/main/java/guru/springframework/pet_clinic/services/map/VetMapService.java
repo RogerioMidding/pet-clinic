@@ -10,11 +10,11 @@ import guru.springframework.pet_clinic.services.SpecialityService;
 import guru.springframework.pet_clinic.services.VetService;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
 	private SpecialityService specialityService;
 	
-	public VetServiceMap(SpecialityService specialityService) {
+	public VetMapService(SpecialityService specialityService) {
 		super();
 		this.specialityService = specialityService;
 	}
