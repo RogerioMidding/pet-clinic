@@ -11,10 +11,12 @@ import guru.springframework.pet_clinic.model.Pet;
 import guru.springframework.pet_clinic.model.PetType;
 import guru.springframework.pet_clinic.model.Speciality;
 import guru.springframework.pet_clinic.model.Vet;
+import guru.springframework.pet_clinic.model.Visit;
 import guru.springframework.pet_clinic.services.OwnerService;
 import guru.springframework.pet_clinic.services.PetTypeService;
 import guru.springframework.pet_clinic.services.SpecialityService;
 import guru.springframework.pet_clinic.services.VetService;
+import guru.springframework.pet_clinic.services.VisitService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -23,14 +25,17 @@ public class DataLoader implements CommandLineRunner {
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialityService specialityService;
+	private final VisitService visitService;
 	
 	@Autowired
 	public DataLoader(OwnerService ownerService, VetService vetService, 
-			PetTypeService petTypeService, SpecialityService specialityService) {
+			PetTypeService petTypeService, SpecialityService specialityService,
+			VisitService visitService) {
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 		this.specialityService = specialityService;
+		this.visitService = visitService;
 	}
 
 	@Override
@@ -95,6 +100,13 @@ public class DataLoader implements CommandLineRunner {
 		fionnasCat.setBirthDate(LocalDate.now());
 		fionnasCat.setPetType(savedCatPetType);
 		owner2.getPets().add(fionnasCat);
+		
+		Visit catVisit = new Visit();
+		catVisit.setPet(fionnasCat);
+		catVisit.setDate(LocalDate.now());
+		catVisit.setDescription("Sneezy Kitty");
+		
+		visitService.save(catVisit);
 		
 		System.out.println("-------------- Loadded Owners --------------");
 		
